@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f1115;
+    color: #e6e6e6;
+}
+
+/* -----------------------
+   MAIN LAYOUT
+------------------------ */
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* -----------------------
+   NEW TODO BOX
+------------------------ */
+
+.newTodo {
+    background: #171a21;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    background: #0f1115;
+    border: 1px solid #2a2f3a;
+    color: #e6e6e6;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+button {
+    background: #3b82f6;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+/* -----------------------
+   TODO CARDS
+------------------------ */
+
+.todoCard {
+    background: #171a21;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #2a2f3a;
+}
+
+.todoCard h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.priority {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.priority.high strong { color: #ef4444; }
+.priority.medium strong { color: #f59e0b; }
+.priority.low strong { color: #22c55e; }
+
+.status {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* -----------------------
+   NOTES + COMMANDS
+------------------------ */
+
+.notes {
+    background: #0f1115;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #2a2f3a;
+    white-space: pre-wrap;
+}
+
+.commands {
+    background: #0b0d12;
+    border: 1px solid #2a2f3a;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    color: #a5f3fc;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+}
+
+/* -----------------------
+   BUTTONS AREA
+------------------------ */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    flex: 1;
+    background: #2a2f3a;
+}
+
+.buttons button:hover {
+    background: #3b4252;
+}
+
+/* -----------------------
+   DIVIDER
+------------------------ */
+
+hr {
+    border: none;
+    border-top: 1px solid #2a2f3a;
+    margin: 20px 0;
+}
+
+/* -----------------------
+   MODAL (CLEANED - SINGLE VERSION)
+------------------------ */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modalContent {
+    background: #171a21;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
